@@ -10,25 +10,35 @@ export class PostService {
 
    async listAllPost() {
       try {
-         const result = await this.prisma
+         const result = await this.prisma.posts.findMany();
+         return result;
       } catch (error) {
-         
+         return error.message;
       }
    };
 
    async listOnePost(id: number) {
       try {
-         
+         const result = await this.prisma.posts.findMany({
+            where: {id: id}
+         });
+         return result;
       } catch (error) {
-         
+         return error.message;
       }
    };
 
    async createPost(postData: PostDto) {
       try {
-         
+         const result = await this.prisma.posts.create({
+            data: {
+               title: postData.title,
+               description: postData.description
+            }
+         });
+         return result;
       } catch (error) {
-         
+         return error.message;
       }
    };
 
