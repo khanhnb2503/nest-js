@@ -12,21 +12,21 @@ export class UsersController {
       private usersService: UsersService
    ){};
 
-   @Post('signIn')
-   async signIn(@Body() userData: UserLoginDto) {
-      try {
-         return this.usersService.signIn(userData);
-      } catch (error) {
-         return error.message;
-      }
-   };
+   // @Post('signIn')
+   // async signIn(@Body() userData: UserLoginDto) {
+   //    try {
+   //       return this.usersService.signIn(userData);
+   //    } catch (error) {
+   //       return error.message;
+   //    }
+   // };
 
-   @Post('signUp')
-   async signUp(@Body() userData: UserDto) {
-      try {
-         return this.usersService.signUp(userData);
-      } catch (error) {
-         return error.message;
-      }
-   };
+   // @Post('signUp')
+   // async signUp(@Body() userData: UserDto) {
+   //    try {
+   //       return this.usersService.signUp(userData);
+   //    } catch (error) {
+   //       return error.message;
+   //    }
+   // };
 }

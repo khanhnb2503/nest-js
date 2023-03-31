@@ -11,3 +11,11 @@ export class AuthDto {
    @IsNotEmpty()
    password: string;
 }
+
+export class signDto {
+   @IsNotEmpty()
+   username: string;
+
+   @IsNotEmpty()
+   password: string;
+}
